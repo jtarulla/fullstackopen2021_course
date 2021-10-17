@@ -1,15 +1,15 @@
 import React from 'react'
-import Part from './Part';
+import Part from './Part'
 
-const Content = ({ parts }) => {
+const Content = ({content}) => {
   return (
-    <div>
-      {parts.map(partsObject => {
+    <ul>
+      {content.map(part => {
           return (
-            <Part key={partsObject.exercises} parts={partsObject} />
+            <Part key={part.id} part={part} />
           );
       })}
-    </div>
+    </ul>
   )
 }
 
